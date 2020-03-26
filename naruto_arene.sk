@@ -1,0 +1,9 @@
+on rightclick on sign:
+    if line 2 is "Arene 1:":
+        if line 3 is "(0/2 joueurs)":
+            set line 3 to "(1/2 joueurs)"
+            execute console command "/tp %player% 1771 67 -2079"
+            
+        if line 3 is "(1/2 joueurs)":
+            set line 3 to "(2/2 joueurs)"
+            execute console command "/tp %player% 1771 67 -1985"

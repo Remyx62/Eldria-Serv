@@ -1,0 +1,191 @@
+#======================================================================================================================================
+#Les clans de konoah
+#======================================================================================================================================
+
+
+on rightclick on sign:
+    if line 3 is "clan Nara":
+        set {clan.%player%} to "Nara"
+        send "&bVous avez rejoint le clan Nara (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Yamanaka":
+        set {clan.%player%} to "Yamanaka"
+        send "&bVous avez rejoint le clan Yamanaka (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Hyuga":
+        set {clan.%player%} to "Hyuga"
+        send "&bVous avez rejoint le clan Hyuga (Faites /info clan pour avoir plus d'informations)"
+    
+    if line 3 is "clan Namikaze":
+        set {clan.%player%} to "Mamikaze"
+        send "&bVous avez rejoint le clan Mamikaze (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Haburame":
+        set {clan.%player%} to "Haburame"
+        send "&bVous avez rejoint le clan Haburame (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Uzumaki":
+        set {clan.%player%} to "Uzumaki"
+        send "&bVous avez rejoint le clan Uzumaki (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Senju":
+        set {clan.%player%} to "Senju"
+        send "&bVous avez rejoint le clan Senju (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Sarutobi":
+        set {clan.%player%} to "Sarutobi"
+        send "&bVous avez rejoint le clan Sarutobi (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Uchiha":
+        set {clan.%player%} to "Uchiha"
+        send "&bVous avez rejoint le clan Uchiha (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Akimichi":
+        set {clan.%player%} to "Akimichi"
+        send "&bVous avez rejoint le clan Akimichi (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Inuzuka":
+        set {clan.%player%} to "Inuzuka"
+        send "&bVous avez rejoint le clan Inuzuka (Faites /info clan pour avoir plus d'informations)"
+
+    if line 3 is "clan Hatake":
+        set {clan.%player%} to "Hatake"
+        send "&bVous avez rejoint le clan Hatake (Faites /info clan pour avoir plus d'informations)"
+        
+    if line 3 is "clan Haruno":
+        set {clan.%player%} to "Haruno"
+        send "&bVous avez rejoint le clan Haruno (Faites /info clan pour avoir plus d'informations)"
+        
+#======================================================================================================================================
+#informations sur les clans
+#======================================================================================================================================
+
+command /info:
+    trigger:
+        if player is in "Naruto":
+            
+            if {clan.%player%} = "Senju":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send " "
+                send "_Accès aux techniques du mokuton (techniques reliées au bois)"
+            
+            
+                
+                
+            if {clan.%player%} = "Uchiha":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont:"
+                send " "
+                send "_Accès a plus de techniques Katon (techniques reliées au feu)"
+               
+                
+                
+            if {clan.%player%} = "Akimichi":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "_Plus de force"
+                
+                
+            if {clan.%player%} = "Uzumaki":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send " "
+                send "Plus de chakra"
+                    
+            if {clan.%player%} = "Nara":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send " "
+                send "_Possibilité de ralentir les joueurs"
+                
+            if {clan.%player%} = "Sarutobi":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send " "
+                send "_Possibilité de se présenter au poste de kokage (chef du village)"
+                
+            if {clan.%player%} = "Inuzuka":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send " "
+                send "_Possibilité d'invoquer des chiens"
+                  
+            if {clan.%player%} = "Aburame":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "Plus de protection"
+               
+                
+            if {clan.%player%} = "Yamanaka":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}% :"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "Messages privés"
+                
+            if {clan.%player%} = "Hyuga":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                
+                
+            if {clan.%player%} = "Mamikaze":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "Annonce lorsque qu'un joueur se rapproche"
+
+            if {clan.%player%} = "Haruno":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "Accès aux techniques médicals"
+            
+            if {clan.%player%} = "Hatake":
+                send "====================================================="
+                send "               &l&cLe clan %{clan.%player%}%:"
+                send "====================================================="
+                send " "
+                send "&bLes spécificités sont :"
+                send ""
+                send "Accès à la technique chidori (envoie un éclair)"
+        
+        else:
+            send "Vous devez jouer au mode de jeu Naruto"

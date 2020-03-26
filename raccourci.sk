@@ -1,0 +1,16 @@
+command /gm [<text>]:
+    trigger:
+        if player is op:
+            if arg 1 is set:
+                if arg 1 is "1":
+                    execute player command "gamemode 1" 
+                if arg 1 is "2":
+                    execute player command "gamemode 2"   
+                if arg 1 is "3":
+                    execute player command "gamemode 3"
+                if arg 1 is "0":
+                    execute player command "gamemode 0"    
+            else:
+                send "&cFaites /gm [0.1.2.3]"
+        else:
+            send "&cVous devez être admin pour éxécuter cette commande"

@@ -1,0 +1,47 @@
+#========================================================
+#doton X
+#========================================================
+
+
+#====================================================
+#    heal player
+#    push the victim in direction of attacker at speed 5
+#    push player in the player's direction at speed 1
+#    loop blocks above the player:
+#    loop-block is not air:
+#        exit 2 sections
+#message "A %player% sauvage apparait !"
+#    set loop-block to water
+#show mob spawner flames at the targeted block to the player
+#teleport the player to
+#on consume of water bottle:
+#================================================================
+
+on any mouvement:
+    if player is sneaking:
+        if {chakra.%uuid of player%} < 100:
+            add 0.2 to {chakra.%uuid of player%}
+            wait 1 second
+command /l:
+    trigger:
+        delete {chakra.%uuid of player%}
+        add 0.2 to {chakra.%uuid of player%}
+#======================================================
+#epée de la brume V
+#======================================================
+command /epéedelabrume:
+    trigger:
+        if {epée.%uuid of player%} is "on":
+            give diamond sword of unbreaking 1 named "&c&ko &cépée de la brume &ko" to player
+            set {epée.%uuid of player%} to "off"
+command /k:
+    trigger:
+        if player is op:
+            set {epée.%uuid of player%} to "on"
+on damage:
+    if victim is a player:
+        if attacker is a player:
+            if attacker has a diamond sword:
+                if name of tool of attacker is "&c&ko &cépée de la brume &ko":
+                    cancel event
+                    execute console command "/effect %victim% minecraft:blindness 10 5"

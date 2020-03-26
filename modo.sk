@@ -1,0 +1,223 @@
+#================================================================================================
+#Commande pour interragir avec l inventaire des joueurs.
+#================================================================================================
+command /invsee [<text>] [<player>]:
+    permission: invsee.script
+    permission message: Tu n as pas la permission
+    trigger:
+        if arg 1 is "inventaire":
+            open the arg-2's inventory for the player
+        if arg 1 is "ender_chest":
+            open the arg-2's ender chest for the player
+        if arg 1 is not set:
+            send "&cFaites /invsee [inventaire ou ender_chest] [nom du joueur]"
+        if arg 1 is not "inventaire" or "ender_chest":
+            send "&cFaites /invsee [inventaire ou ender_chest] [nom du joueur]"
+#================================================================================================
+#Commande /Alerte
+#================================================================================================
+command /alerte [<text>]:
+    trigger:
+        if player is op:
+            execute player command "/say &l&n&c[Alerte] &l&n&b%arg 1%" 
+        else:
+            send "<red>Vous devez etre admin..."
+#======================================================
+#anti bug drop
+#======================================================
+on drop:
+    wait 10 seconds
+    delete event-entity
+#===================================================================================================
+#commande pour les annonces
+#=================================================================================================
+command /annonce [<text>]:
+    trigger:
+        if player is op:
+            execute player command "/say &l&n&c[Annonce] &l&n&b%arg 1%" 
+        else:
+            send "&cVous devez être admin..."
+#=========================================================================
+#parler en mode modo
+#=========================================================================
+on chat:
+    set {player} to "%uuid of player%"
+    if {player} is "b34e35a0-2080-3c24-b312-cd21564a3b01":
+        cancel event
+        execute player command "/say :&ko %message% &ko !!!"
+
+#============================================
+#panneau modo
+#============================================
+on sign change:
+    if line 1 is "[Modo]":
+        if line 2 is "barrier":
+            set line 1 to "<green>[Modo]"
+            set line 2 to "<blue>barrier"
+        if line 2 is "command_block":
+            set line 1 to "<green>[Modo]"
+            set line 2 to "<blue>command_block"
+        if line 2 is "Clear":
+            set line 1 to "<green>[Modo]"
+            set line 2 to "<blue>Clear"
+on right click on sign:
+    if line 1 is "<green>[Modo]":
+        if line 2 is "<blue>barrier":
+            execute player command "/give %player% barrier"
+        if line 2 is "<blue>command_block":
+            execute player command "/give %player% command_block"
+        if line 2 is "<blue>Clear":
+            give 1 arrow named "<red>Clear" to player
+#============================================
+#============================================
+#menu
+#============================================
+#============================================
+
+
+#======================
+#stuff modo spawn
+#======================
+on join:
+    if player is op:
+        execute player command "/clear"
+        wait 1 tick
+        give 1 clock named "<blue>Menu" to player
+        give 1 compass to player
+        give 1 arrow named "<red>clear" to player
+#=================================================
+#ouvrir le menu
+#=======================
+on rightclick with clock:
+    if player is op:
+        if name of tool of player is "<blue>Menu":
+            execute player command "/menu"
+            
+command /menu:
+    trigger:
+        if player is op:
+            open chest with 1 row named "<blue>Menu" to player
+            wait 3 ticks
+            format slot 0 of player with ender pearl named "<cyan>Menu de teleportation" with lore "<orange>Cliquez pour acceder au menu teleportation" to run [execute player command "/menutp1"]
+            format slot 1 of player with beacon named "<cyan>Distributeur" with lore "<orange>Cliquez pour acceder au distributeur" to run [execute player command "/menudistri"]
+            format slot 2 of player with clock named "<cyan>Meteo" with lore "<orange>Cliquez pour acceder au menu de la meteo" to run [execute player command "/menumeteo"]
+            format slot 3 of player with glowstone named "<blue>Lobby" to run [execute player command "/lobby"]
+            format slot 4 of player with stick named "<red>stop" to run [execute player command "/stop"]
+command /stop:
+    trigger:
+        set {menu.%player%} to "non"
+command /menuon:
+    trigger:
+        set {menu.%player%} to "oui"
+        
+
+#=============================================
+#menu de tp
+#=============================
+command /menutp1:
+    trigger:
+        if player is op:
+            open chest with 1 rows named "<blue>choix du monde" to player
+            wait 3 ticks
+            format slot 0 of player with wool:15 named "<blue>RP" to run [execute player command "/menutp"]
+            format slot 1 of player with wool:14 named "<blue>Bedwars" to run [execute player command "/menutpbd"]
+            format slot 2 of player with fire charge named "<blue>Naruto" to run [execute player command "/menutpNaruto"]
+command /menutpNaruto:
+    trigger:
+        if player is op:
+            open chest with 1 rows named "<blue>Naruto" to player
+            wait 3 ticks
+            format slot 0 of player with wool:14 named "<blue>konoha" to run [execute player command "/tp 1558 66 -2233"]
+command /menutpbd:
+    trigger:
+        if player is op:
+            open chest with 1 rows named "<blue>Bedwars" to player
+            wait 3 ticks
+            format slot 0 of player with beacon named "<blue>Spawn" to run [execute player command "/tp 0 105 -1"]
+            
+command /menutp:
+    trigger:
+        if player is op:
+            open chest with 1 rows named "<blue>rp" to player
+            wait 3 ticks
+            format slot 0 of player with bricks block named "<red>Ville" with lore "<orange>Cliquez pour aller a la ville" to run [execute player command "/menutpville"]
+            format slot 1 of player with saplings:3 named "<green>Jungle" with lore "<orange>Cliquez pour aller a la jungle" to run [execute player command "/tp %player% 524 95 740"]
+            format slot 2 of player with golden apple:1 named "<yellow>Salle des modos" with lore "<orange>Cliquez pour aller a la salle des modos" to run [execute player command "/tp %player% 62 68 302"]
+            format slot 3 of player with golden pickaxe named "<yellow>Minage" with lore "<orange>Cliquez pour aller au minage" to run [execute player command "/tp %player% 1000169 64 -999782"]
+            format slot 4 of player with golden hoe named "<green>Ferme" with lore "<orange>Cliquez pour aller a la ferme" to run [execute player command "/tp %player% -1000073 63 -1000009"]
+            format slot 5 of player with stone brick named "<red>event" with lore "<orange>Cliquez pour aller a l'event" to run [execute player command "/event"]
+            format slot 8 of player with arrow named "<white>Retour" to run [execute player command "/menu"]
+#=================================================
+command /menumeteo:
+    trigger:
+        if player is op:
+            open chest with 1 row named "<blue>Meteo" to player
+            wait 3 ticks
+            format slot 0 of player with fish:3 named "<yellow>Soleil(jour)" to run [execute player command "/time set day"]
+            format slot 1 of player with dye:0 named "<yellow>Lune(nuit)" to run [execute player command "/time set night"]
+            format slot 2 of player with fish:3 named "<yellow>Soleil(beau temps)" to run [execute player command "/weather clear"]
+            format slot 3 of player with water bucket named "<yellow>Pluie(pluie)" to run [execute player command "/weather rain"]
+            
+
+
+
+
+
+#===========================================
+command /menutpville:
+    trigger:
+        if player is op:
+            open chest with 5 rows named "<blue>Menu de téléportation (ville)" to player
+            wait 3 ticks
+            format slot 21 of player with paper named "<pink>Ouest" with lore "<orange>Terrain multi sport" to run [execute player command "/tp %player% -79 64 138"]
+            format slot 22 of player with paper named "<pink>Centre" with lore "<orange>Mairie" to run [execute player command "/hub ville"]
+            format slot 23 of player with paper named "<pink>Est" with lore "<orange>Terrain de football" to run [execute player command "/tp %player% 296 64 166"]
+            format slot 13 of player with paper named "<pink>Nord" with lore "<orange>Hopital" to run [execute player command "/tp %player% 49 67 49"]
+            format slot 31 of player with paper named "<pink>Sud" with lore "<orange>Tour blanche" to run [execute player command "/tp %player% 25 68 253"]
+            format slot 12 of player with paper named "<pink>Nord-Ouest" with lore "<orange>Grange" to run [execute player command "/tp %player% -149 63 61"]
+            format slot 14 of player with paper named "<pink>Nord-Est" with lore "<orange>Marché" to run [execute player command "/tp %player% 229 70 93"]
+            format slot 30 of player with paper named "<pink>Sud-Ouest" with lore "<orange>Maison rémy" to run [execute player command "/tp %player% -79 64 230"]
+            format slot 32 of player with paper named "<pink>Sud-Est" with lore "<orange>Pont transversale" to run [execute player command "/tp %player% 222 72 216"]
+            format slot 44 of player with arrow named "<white>Retour" to run [execute player command "/menutp"]
+            
+#==================================================
+on rightclick with arrow:
+    if name of tool of player is "<red>Clear":
+        if player is op:
+            execute player command "/clear"
+#===================================================
+on any movement:
+    if player is op:
+        if player has clock named "<blue>Menu":
+            wait 1 tick
+        else:
+            if {menu.%player%} is not "non":
+                give 1 clock named "<blue>Menu" to player
+#================================================
+command /menudistri:
+    trigger:
+        if player is op:
+            open chest with 2 rows named "<blue>Distributeur" to player
+            wait 3 ticks
+            format slot 0 of player with diamond sword named "<red>Stuff" to run [execute player command "/give %player% diamond_sword" and "/give %player% bow" and "/give %player% diamond_helmet" and "/give %player% diamond_chestplate" and "/give %player% diamond_leggings" and "/give %player% diamond_boots"]
+            format slot 1 of player with wooden axe named "<red>Hache" to run [execute player command "/give %player% wooden_axe"]
+            format slot 2 of player with iron ingot named "<red>téléphone" to run [execute player command "/gphone"]
+            format slot 17 of player with arrow named "<white>Retour" to run [execute player command "/menu"]
+command /gphone:
+    trigger:
+        if player is op:
+            give iron ingot named "<blue>Téléphone" to player
+#===============================
+#pseudo
+#===============================
+on join:
+    execute console command "/scoreboard objectives add PV health"
+    execute console command "/scoreboard objectives setdisplay belowName PV"
+    
+
+command /bedwarsori:
+    trigger:
+        execute console command "/mv tp world2"
+        wait 1 tick
+        execute player command "/tp %player%"
+        execute console command "/gamemode 1 %player%"

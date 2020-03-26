@@ -1,0 +1,19 @@
+on join:
+    send player title "&cBienvenue sur Eldria!" with subtitle "&3Amuse toi bien %player% !" for 4 seconds
+
+    set join message to "&c&l[Konoah] &b&l[%{grade.%player%}%] &c[%{clan.%player%}%] &bà rejoin le serveur !" 
+
+    if player is op:
+
+        set gamemode of player to creativ
+
+        teleport player to
+    
+    else:
+
+        set gamemode of player to adventure
+
+        teleport player to 
+
+on quit:
+    set quit message to "&c&l[Konoah] &b&l[%{grade.%player%}%] &c[%{clan.%player%}%]à quitté le serveur !"

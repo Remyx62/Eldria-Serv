@@ -1,0 +1,47 @@
+command /sethub [<text>]:
+    description: Placer le hub
+    trigger:
+        if player is op:
+            if arg 1 is "ville":
+                set {ville} to player's location
+                send "&c le hub a ete placé a votre position"
+            if arg 1 is "jungle":
+                set {jungle} to player's location
+                send "&c le hub a ete placé a votre position"
+            if arg 1 is "modo":
+                set {modo} to player's location
+                send "&c le hub a ete placé a votre position"
+            if arg 1 is "Dome":
+                set {Dome} to player's location
+                send "&c le hub a ete placé a votre position"
+        else:
+            send "&cTu n'as pas la permission d'effectuer cette commande"
+command /hub [<text>] [<text>]:
+    trigger:
+        if arg 1 is "ville":
+            teleport player to {ville}
+        if arg 1 is "Dome":
+            teleport player to {Dome}
+        if arg 1 is "jungle":
+            if arg 2 is "%player%":
+                if player is op:
+                    teleport player to {jungle}
+                    stop
+                if {vip.list::*} contains "arg 2":
+                    teleport player to {jungle}
+                else:
+                    send "&c Tu dois D'abord faire la quete 1 pour cous tp au hub Jungle"
+            else:
+                send "&cVous n'etes pas %arg 2%, vous etes %player% :)"
+        if arg 1 is "modo":
+            if player is op:
+                teleport player to {modo}
+command /spawn [<text>]:
+    trigger:
+        if arg-1 is set:
+            if arg-1 is "bedwars":
+                execute console command "/tp %player% 0 100 -1"
+                if player is op:
+                    execute player command "/gm 1"
+                else:
+                    execute console command "/gamemode 2 %player%"
