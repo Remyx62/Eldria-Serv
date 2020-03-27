@@ -5,11 +5,11 @@ on rightclick on villager:
         open chest with 1 row named "<blue>Menu" to player
         wait 3 ticks
        
-        format slot 1 of player with arrow named "<cyan>kunai" to run [execute player command "/menu kunai"]
-        format slot 2 of player with arrow named "<cyan>kunai v2" to run [execute player command "/menu kunai2"]
-        format slot 3 of player with arrow named "<cyan>kunai v3" to run [execute player command "/menu kunai3"]
-        format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
-
+        format slot 1 of player with arrow named "<cyan>kunai" with lore "<orange>1Ryo" to run [execute player command "/menu kunai"]
+        format slot 2 of player with arrow named "<cyan>kunai v2" with lore "<orange>2Ryos" to run [execute player command "/menu kunai2"]
+        format slot 3 of player with arrow named "<cyan>kunai v3" with lore "<orange>3Ryos" to run [execute player command "/menu kunai3"]
+        format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<orange>5Ryos||<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
+        format slot 5 of player with wooden sword named "<cyan>épée de la brume" with lore "<orange>50Ryos" to run [execute player command "/menu epeedelabrume"]
 command /menu [<text>] [<text>]:
     trigger:
         if arg-1 is "kunai":
@@ -117,6 +117,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunai 64"]
             if arg-2 is "0":
                 set {nombredekunai.%player%} to 0
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunai 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
@@ -237,6 +239,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunai2 64"]
             if arg-2 is "-100":
                 add -100 to {nombredekunai2.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunai2 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
@@ -248,6 +252,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunai2 64"]
             if arg-2 is "0":
                 set {nombredekunai2.%player%} to 0
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunai2 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
@@ -362,6 +368,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunai3 64"]
             if arg-2 is "-100":
                 add -100 to {nombredekunai3.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunai3 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
@@ -373,6 +381,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunai3 64"]
             if arg-2 is "0":
                 set {nombredekunai3.%player%} to 0
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunai3 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
@@ -485,6 +495,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
             if arg-2 is "-100":
                 add -100 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
@@ -496,6 +508,8 @@ command /menu [<text>] [<text>]:
                 format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
             if arg-2 is "0":
                 set {nombredekunaitp.%player%} to 0
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
                 format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
@@ -509,7 +523,30 @@ command /menu [<text>] [<text>]:
                 loop {nombredekunaitp.%player%} times:
                     give arrow named "kunai v2" to player
                     add -5 to {ryo.%player%}
-            
+        if arg-1 is "epeedelabrume":
+            if arg-2 is set:
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with glass pane named "<black>." to be unstealable
+                format slot 1 of player with glass pane named "<black>." to be unstealable
+                format slot 2 of player with glass pane named "<black>." to be unstealable
+                format slot 3 of player with locked chest:14 named "<red>annuler" to run [execute player command "/menu kunaitp cancel"]
+                format slot 4 of player with locked chest:15 named "<white>Confirmer?" to be unstealable
+                format slot 5 of player with locked chest:5 named "<green>confirmer" to run [execute player command "/menu kunaitp confirme"]
+                format slot 6 of player with glass pane named "<black>." to be unstealable
+                format slot 7 of player with glass pane named "<black>." to be unstealable
+                format slot 8 of player with glass pane named "<black>." to be unstealable
+            if arg-2 is "confirme":
+                give diamond sword of unbreaking 1 named "&c&ko &cépée de la brume &ko" to player
+on damage:
+    if victim is a player:
+        if attacker is a player:
+            if attacker has a diamond sword:
+                if name of tool of attacker is "&c&ko &cépée de la brume &ko":
+                    cancel event
+                    execute console command "/effect %victim% minecraft:blindness 10 5"
+                    damage the victim 1 hearts
+
 
 
         

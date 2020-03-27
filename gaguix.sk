@@ -26,22 +26,3 @@ command /l:
     trigger:
         delete {chakra.%uuid of player%}
         add 0.2 to {chakra.%uuid of player%}
-#======================================================
-#epée de la brume V
-#======================================================
-command /epéedelabrume:
-    trigger:
-        if {epée.%uuid of player%} is "on":
-            give diamond sword of unbreaking 1 named "&c&ko &cépée de la brume &ko" to player
-            set {epée.%uuid of player%} to "off"
-command /k:
-    trigger:
-        if player is op:
-            set {epée.%uuid of player%} to "on"
-on damage:
-    if victim is a player:
-        if attacker is a player:
-            if attacker has a diamond sword:
-                if name of tool of attacker is "&c&ko &cépée de la brume &ko":
-                    cancel event
-                    execute console command "/effect %victim% minecraft:blindness 10 5"
