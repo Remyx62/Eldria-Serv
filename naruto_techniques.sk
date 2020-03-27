@@ -1,0 +1,672 @@
+on rightclick with stick:
+    
+    if name of tool of player is "jutsu":
+    
+        cancel event
+        wait 1 tick
+        
+        if player is in "Naruto":
+        
+            if player is op:
+                if {mudra.%uuid of player%} is not 1.0101,2,1000,2000,1001.0001,0.0102 or 1000.0003:
+                    send "&bVous avez raté la technique"
+                    set {mudra.%uuid of player%} to 0
+                    
+                else:
+#======================================================================================================
+#jutsu du doton : Mur de terre foireu
+#=================================================================================================
+
+                    if {mudra.%uuid of player%} = 1.0101:  
+                    
+                        add -10 to {chakra.%uuid of player%}
+                        set {mudra.%uuid of player%} to 0
+                        execute console command "/op %player%"
+                        send "donton : Mur de terre"
+                        
+                        if player's facing is east:
+                        
+                            set {coordonné1.%player%} to "~-5 ~ ~-5 ~ ~ ~ ~"
+                            
+    
+                            
+                            
+                        if player's facing is south:
+                            execute player command "/fill ~3 ~ ~3 ~-3 ~4 ~3 dirt"
+                            execute player command "/effect %player% minecraft:slowness 1 200"
+                            execute player command "/setblock ~ ~2 ~ stone"
+                            wait 20 ticks
+                            
+                            execute player command "/setblock ~ ~2 ~ air"
+                            execute player command "/fill ~3 ~ ~3 ~-3 ~4 ~3 air"
+                            if player is op:
+                                stop
+                            else:
+                                execute console command "/deop %player%"
+                            
+                        if player's facing is west:
+                            execute player command "/fill ~-3 ~ ~3 ~-3 ~4 ~-3 dirt"
+                            execute player command "/effect %player% minecraft:slowness 1 200"
+                            execute player command "/setblock ~ ~2 ~ stone"
+                            
+                            execute player command "/fill ~-3 ~ ~3 ~-3 ~4 ~-3 air"
+                            execute player command "/setblock ~ ~2 ~ air"
+                            if player is op:
+                                stop
+                            else:
+                                execute console command "/deop %player%"
+                                
+                        if player's facing is north:
+                            
+                            execute player command "/fill ~-3 ~ ~-3 ~3 ~4 ~-3 dirt"
+                            execute player command "/effect %player% minecraft:slowness 1 200"
+                            execute player command "/setblock ~ ~2 ~ stone"
+                            wait 20 ticks
+                            execute player command "/fill ~-3 ~ ~-3 ~3 ~4 ~-3 air"
+                            execute player command "/setblock ~ ~2 ~ air"
+                            if player is op:
+                                stop
+        
+                    
+#===============================
+#jutsu suiton mini
+#===============================
+                    if {mundra.%uuid of player%} = 2:
+                        add -5 to {chakra.%uuid of player%}
+                        set {suitonmini.%player%} to player's location
+                        set the block at player's location to water
+                        wait 1 second
+                        set the block at {suitonmini.%player%} to air
+                    
+#======================================================================================================
+#jutsu du deplacement+
+#======================================================================================================
+                            
+                    if {mudra.%uuid of player%} = 1000: 
+                        add -5 to {chakra.%uuid of player%}
+                        set {mudra.%uuid of player%} to 0
+                        set {deplacement+.%player%} to "on"
+                        send "&bmode déplacement+ activé"
+                        execute console command "/effect %player% minecraft:speed 20 4"
+                        execute console command "/effect %player% minecraft:jump_boost 20 2"
+                        wait 400 ticks
+                        set {deplacement+.%player%} to "off"
+                       
+#======================================================================================================
+#jutsu du tsunami de switon pas fini dans gaguix
+#======================================================================================================
+
+                    
+                            
+#======================================================================================================
+#jutsu de la substitution:
+#======================================================================================================
+                        if {mudra.%uuid of player%} = 1001.0001: 
+                            add -10 to {chakra.%uuid of player%}
+                            set {mudra.%uuid of player%} to 0 
+                            execute player command "/summon ArmorStand"
+                            send "&bSubstitution"
+                            if player's facing is east:
+                                        
+                                execute player command "/tp %player% ~-10 ~ ~"
+                                
+                            if player's facing is west:
+                                
+                                execute player command "/tp %player% ~10 ~ ~"
+                                
+                            if player's facing is north:
+                                        
+                                execute player command "/tp %player% ~10 ~ ~" 
+                                        
+                            if player's facing is south:
+                                        
+                                execute player command "/tp %player% ~-10 ~ ~" 
+                               
+                        
+#======================================================================================================
+#jutsu de la fireball:
+#======================================================================================================
+                
+                        if {mudra.%uuid of player%} = 0.0102: 
+                            add -10 to {chakra.%uuid of player%}
+                            set {mudra.%uuid of player%} to 0 
+                            make the player shoot a fireball at speed 2
+                        
+                            
+#====================================================================================================
+#Techniques Héréditaires
+#====================================================================================================
+                        if {mudra.%uuid of player%} = 1000.0003:
+                            set {mudra.%uuid of player%} to 0
+                            if {clan.%player%} is "Senju":
+                                add 1 to {technique?}
+                                set {xyzm.%player%} to player's location
+                                                
+                                execute console command "/op %player%"
+                                send "&bMocouton,L'arborecense supreme"
+                                if player's facing is east:
+                                    wait 1 tick
+                                    set {mute.%player%} to "on"
+                                    execute player command "/setblock ~-1 ~ ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~1 ~-1 minecraft:log"
+                                    execute player command "/setblock ~-1 ~1 ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~1 ~-2 minecraft:log"
+                                    execute player command "/setblock ~-1 ~1 ~2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~2 ~-2 minecraft:log"
+                                    execute player command "/setblock ~ ~2 ~2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-2 minecraft:log"
+                                    execute player command "/setblock ~1 ~2 ~2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~2 ~-2 minecraft:log"
+                                    execute player command "/setblock ~2 ~2 ~2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~1 ~2 minecraft:log"
+                                    execute player command "/setblock ~4 ~1 ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~4 ~1 ~2 minecraft:log"
+                                    execute player command "/setblock ~5 ~1 ~-2 minecraft:log"
+                                    execute player command "/setblock ~5 ~2 ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~6 ~2 ~ minecraft:log"
+                                    execute player command "/setblock ~5 ~ ~3 minecraft:log"
+                                    execute player command "/setblock ~6 ~ ~-3 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~7 ~2 ~ minecraft:log"
+                                    execute player command "/setblock ~6 ~ ~3 minecraft:log"
+                                    execute player command "/setblock ~7 ~ ~-3 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~7 ~ ~3 minecraft:log"
+                                    execute player command "/setblock ~8 ~ ~-3 minecraft:log"
+                                                    
+                                    set {mute.%player%} to "off"
+                                                    
+                                    execute player command "/deop %player%"
+                                                    
+                                    wait 400 ticks
+                                                    
+                                    execute console command "/op %player%"
+                                                    
+                                    set {mute.%player%} to "on"
+                                                    
+                                    set {xyz2.%player%} to player's location
+                                                    
+                                    teleport the player to {xyz.%player%}
+                                                    
+                                    execute player command "/setblock ~-1 ~ ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~1 ~-1 minecraft:air"
+                                    execute player command "/setblock ~-1 ~1 ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~1 ~-2 minecraft:air"
+                                    execute player command "/setblock ~-1 ~1 ~2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~2 ~-2 minecraft:air"
+                                    execute player command "/setblock ~ ~2 ~2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-2 minecraft:air"
+                                    execute player command "/setblock ~1 ~2 ~2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~2 ~-2 minecraft:air"
+                                    execute player command "/setblock ~2 ~2 ~2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~1 ~2 minecraft:air"
+                                    execute player command "/setblock ~4 ~1 ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~4 ~1 ~2 minecraft:air"
+                                    execute player command "/setblock ~5 ~1 ~-2 minecraft:air"
+                                    execute player command "/setblock ~5 ~2 ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~6 ~2 ~ minecraft:air"
+                                    execute player command "/setblock ~5 ~ ~3 minecraft:air"
+                                    execute player command "/setblock ~6 ~ ~-3 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~7 ~2 ~ minecraft:air"
+                                    execute player command "/setblock ~6 ~ ~3 minecraft:air"
+                                    execute player command "/setblock ~7 ~ ~-3 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~7 ~ ~3 minecraft:air"
+                                    execute player command "/setblock ~8 ~ ~-3 minecraft:air"
+                                                    
+                                    teleport the player to {xyz2.%player%}
+                                                    
+                                    execute player command "/deop %player%"
+                                    if player's name is "gaguix":
+                                        execute console command "/op gaguix"
+                                                        
+                                    set {mute.%player%} to "off"
+                                    stop
+                                                    
+                                if player's facing is west:
+                                    wait 1 tick
+                                    set {mute.%player%} to "on"
+                                    execute player command "/setblock ~1 ~ ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~1 ~1 minecraft:log"
+                                    execute player command "/setblock ~1 ~1 ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~1 ~2 minecraft:log"
+                                    execute player command "/setblock ~1 ~1 ~-2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~2 ~2 minecraft:log"
+                                    execute player command "/setblock ~ ~2 ~-2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~2 minecraft:log"
+                                    execute player command "/setblock ~-1 ~2 ~-2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~2 ~2 minecraft:log"
+                                    execute player command "/setblock ~-2 ~2 ~-2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~1 ~-2 minecraft:log"
+                                    execute player command "/setblock ~-4 ~1 ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-4 ~1 ~-2 minecraft:log"
+                                    execute player command "/setblock ~-5 ~1 ~2 minecraft:log"
+                                    execute player command "/setblock ~-5 ~2 ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-6 ~2 ~ minecraft:log"
+                                    execute player command "/setblock ~-5 ~ ~-3 minecraft:log"
+                                    execute player command "/setblock ~-6 ~ ~3 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-7 ~2 ~ minecraft:log"
+                                    execute player command "/setblock ~-6 ~ ~-3 minecraft:log"
+                                    execute player command "/setblock ~-7 ~ ~3 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-7 ~ ~-3 minecraft:log"
+                                    execute player command "/setblock ~-8 ~ ~3 minecraft:log"
+                                                    
+                                    set {mute.%player%} to "off"
+                                                    
+                                    execute player command "/deop %player%"
+                                                    
+                                    wait 400 ticks
+                                                    
+                                    execute console command "/op %player%"
+                                                    
+                                    set {mute.%player%} to "on"
+                                                    
+                                    set {xyz2.%player%} to player's location
+                                                    
+                                    teleport the player to {xyz.%player%}
+                                                    
+                                    execute player command "/setblock ~1 ~ ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~1 ~1 minecraft:air"
+                                    execute player command "/setblock ~1 ~1 ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~1 ~2 minecraft:air"
+                                    execute player command "/setblock ~1 ~1 ~-2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~2 ~2 minecraft:air"
+                                    execute player command "/setblock ~ ~2 ~-2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~2 minecraft:air"
+                                    execute player command "/setblock ~-1 ~2 ~-2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~2 ~2 minecraft:air"
+                                    execute player command "/setblock ~-2 ~2 ~-2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~1 ~-2 minecraft:air"
+                                    execute player command "/setblock ~-4 ~1 ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-4 ~1 ~-2 minecraft:air"
+                                    execute player command "/setblock ~-5 ~1 ~2 minecraft:air"
+                                    execute player command "/setblock ~-5 ~2 ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-6 ~2 ~ minecraft:air"
+                                    execute player command "/setblock ~-5 ~ ~-3 minecraft:air"
+                                    execute player command "/setblock ~-6 ~ ~3 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-7 ~2 ~ minecraft:air"
+                                    execute player command "/setblock ~-6 ~ ~-3 minecraft:air"
+                                    execute player command "/setblock ~-7 ~ ~-3 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-8 ~ ~3 minecraft:air"
+                                    execute player command "/setblock ~-7 ~ ~3 minecraft:air"
+                                                    
+                                    teleport the player to {xyz2.%player%}
+                                                    
+                                    execute player command "/deop %player%"
+                                    if player's name is "gaguix":
+                                        execute console command "/op gaguix"
+                                                        
+                                    set {mute.%player%} to "off"
+                                    stop
+                                if player's facing is north:
+                                    wait 1 tick
+                                    set {mute.%player%} to "on"
+                                    execute player command "/setblock ~ ~ ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~1 ~1 minecraft:log"
+                                    execute player command "/setblock ~-1 ~1 ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~ minecraft:log"
+                                    execute player command "/setblock ~-2 ~1 ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-1 minecraft:log"
+                                    execute player command "/setblock ~-2 ~2 ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-2 minecraft:log"
+                                    execute player command "/setblock ~-2 ~2 ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-3 minecraft:log"
+                                    execute player command "/setblock ~-2 ~2 ~-2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~-3 minecraft:log"
+                                    execute player command "/setblock ~1 ~1 ~-4 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~-4 minecraft:log"
+                                    execute player command "/setblock ~2 ~1 ~-5 minecraft:log"
+                                    execute player command "/setblock ~ ~2 ~-5 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~-6 minecraft:log"
+                                    execute player command "/setblock ~-3 ~ ~-5 minecraft:log"
+                                    execute player command "/setblock ~3 ~ ~-6 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~-7 minecraft:log"
+                                    execute player command "/setblock ~-3 ~ ~-6 minecraft:log"
+                                    execute player command "/setblock ~3 ~ ~-7 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~ ~-7 minecraft:log"
+                                    execute player command "/setblock ~3 ~ ~-8 minecraft:log"
+                                                    
+                                    set {mute.%player%} to "off"
+                                                    
+                                    execute player command "/deop %player%"
+                                                    
+                                    wait 400 ticks
+                                                    
+                                    execute console command "/op %player%"
+                                                    
+                                    set {mute.%player%} to "on"
+                                                    
+                                    set {xyz2.%player%} to player's location
+                                                    
+                                    teleport the player to {xyz.%player%}
+                                                    
+                                    execute player command "/setblock ~ ~ ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~1 ~1 ~1 minecraft:air"
+                                    execute player command "/setblock ~-1 ~1 ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~ minecraft:air"
+                                    execute player command "/setblock ~-2 ~1 ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-1 minecraft:air"
+                                    execute player command "/setblock ~-2 ~2 ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-2 minecraft:air"
+                                    execute player command "/setblock ~-2 ~2 ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~2 ~-3 minecraft:air"
+                                    execute player command "/setblock ~-2 ~2 ~-2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~-3 minecraft:air"
+                                    execute player command "/setblock ~1 ~1 ~-4 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~-4 minecraft:air"
+                                    execute player command "/setblock ~2 ~1 ~-5 minecraft:air"
+                                    execute player command "/setblock ~ ~2 ~-5 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~-6 minecraft:air"
+                                    execute player command "/setblock ~-3 ~ ~-5 minecraft:air"
+                                    execute player command "/setblock ~3 ~ ~-6 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~-7 minecraft:air"
+                                    execute player command "/setblock ~-3 ~ ~-6 minecraft:air"
+                                    execute player command "/setblock ~3 ~ ~-7 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-3 ~ ~-7 minecraft:air"
+                                    execute player command "/setblock ~3 ~ ~-8 minecraft:air"
+                                                    
+                                    teleport the player to {xyz2.%player%}
+                                                    
+                                    execute player command "/deop %player%"
+                                    if player's name is "gaguix":
+                                        execute console command "/op gaguix"
+                                                        
+                                    set {mute.%player%} to "off"
+                                    stop
+                                                    
+                                if player's facing is south:
+                                    wait 1 tick
+                                    set {mute.%player%} to "on"
+                                    execute player command "/setblock ~ ~ ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~1 ~-1 minecraft:log"
+                                    execute player command "/setblock ~1 ~1 ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~ minecraft:log"
+                                    execute player command "/setblock ~2 ~1 ~-1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~1 minecraft:log"
+                                    execute player command "/setblock ~2 ~2 ~ minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~2 minecraft:log"
+                                    execute player command "/setblock ~2 ~2 ~1 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~3 minecraft:log"
+                                    execute player command "/setblock ~2 ~2 ~2 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~3 minecraft:log"
+                                    execute player command "/setblock ~-1 ~1 ~4 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~4 minecraft:log"
+                                    execute player command "/setblock ~-2 ~1 ~5 minecraft:log"
+                                    execute player command "/setblock ~ ~2 ~5 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~6 minecraft:log"
+                                    execute player command "/setblock ~3 ~ ~5 minecraft:log"
+                                    execute player command "/setblock ~-3 ~ ~6 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~7 minecraft:log"
+                                    execute player command "/setblock ~3 ~ ~6 minecraft:log"
+                                    execute player command "/setblock ~-3 ~ ~7 minecraft:log"
+                                    wait 2 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~ ~7 minecraft:log"
+                                    execute player command "/setblock ~-3 ~ ~8 minecraft:log"
+                                                    
+                                    set {mute.%player%} to "off"
+                                                    
+                                    execute player command "/deop %player%"
+                                                    
+                                    wait 400 ticks
+                                                    
+                                    execute console command "/op %player%"
+                                                    
+                                    set {mute.%player%} to "on"
+                                                    
+                                    set {xyz2.%player%} to player's location
+                                                    
+                                    teleport the player to {xyz.%player%}
+                                                    
+                                    execute player command "/setblock ~ ~ ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-1 ~1 ~-1 minecraft:air"
+                                    execute player command "/setblock ~1 ~1 ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~1 ~ minecraft:air"
+                                    execute player command "/setblock ~2 ~1 ~-1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~1 minecraft:air"
+                                    execute player command "/setblock ~2 ~2 ~ minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~2 minecraft:air"
+                                    execute player command "/setblock ~2 ~2 ~1 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~-2 ~2 ~3 minecraft:air"
+                                    execute player command "/setblock ~2 ~2 ~2 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~3 minecraft:air"
+                                    execute player command "/setblock ~-1 ~1 ~4 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~2 ~1 ~4 minecraft:air"
+                                    execute player command "/setblock ~-2 ~1 ~5 minecraft:air"
+                                    execute player command "/setblock ~ ~2 ~5 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~6 minecraft:air"
+                                    execute player command "/setblock ~3 ~ ~5 minecraft:air"
+                                    execute player command "/setblock ~-3 ~ ~6 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~ ~2 ~7 minecraft:air"
+                                    execute player command "/setblock ~3 ~ ~6 minecraft:air"
+                                    execute player command "/setblock ~-3 ~ ~7 minecraft:air"
+                                    wait 1 ticks
+                                                    
+                                    execute player command "/setblock ~3 ~ ~7 minecraft:air"
+                                    execute player command "/setblock ~-3 ~ ~8 minecraft:air"
+                                                    
+                                    teleport the player to {xyz2.%player%}
+                                                    
+                                    execute player command "/deop %player%"
+                                    if player's name is "gaguix":
+                                        execute console command "/op gaguix"
+                                                        
+                                    set {mute.%player%} to "off"
+                                    stop 
+                        
+                                if {clan.%player%} is "Haruno": 
+                                    set {Haruno.%player%} to player
+                                    execute console command "/effect %{Haruno.%player%}% minecraft:regeneration 10 2 true"
+                                    send "&bSoins appliqués"
+                        
+                                if {clan.%player%} is "Mamikaze": 
+                                    execute player command "/deplacement"
+                                    send "&bDéplacement instantané"  
+                        
+                                if {clan.%player%} is "Inuzuka": 
+                                    wait 1 ticks
+                        
+                                if {clan.%player%} is "Hatake":
+                                    strike lightning at target block
+                        
+                                if {clan.%player%} is "Akimichi":
+                                    set {Akimichi.%player%} to player
+                                    execute console command "/effect %{Akimichi.%player%}% strenght 20 2" 
+                        
+                                if {clan.%player%} is "Aburame":
+                                    set {Aburame.%player%} to player
+                                    execute console command "/effect %{Aburame.%player%}% minecraft:Health_Boost 15 5"
+                        
+                                if {clan.%player%} is "Uchiha":
+                                    make the player shoot a fireball at speed 2
+                                    wait 2 ticks
+                                    make the player shoot a fireball at speed 2
+                                    wait 4 ticks
+                                    make the player shoot a fireball at speed 2
+                                            
+                                if {clan.%player%} is "Hyuga":
+                                    send "&bByakugan !!!"
+                                    set {bia.%player%} to player's location
+                                    execute console command "/gamemode 3 %player%"
+                                    loop 140 times :
+                                        push player in the player's direction at speed 0.2
+                                        wait 1 tick
+                                    execute console command "/gamemode 2 %player%"
+                                    teleport the player to {bia.%player%}
+                
+
+
+on damage:
+    if name of tool of attacker is "&bGriffe":
+        if {clan.%attacker%} is "Inuzuka":
+            cancel event
+            if {cgriffe.%attacker%} is "on":
+            
+                
+                set {cgriffe.%attacker%} to "off"
+                send "&cVous saigné !" to victim
+                damage victim by 1 hearts
+                wait 3 seconds
+                damage victim by 1 hearts
+                wait 3 seconds
+                damage victim by 1 hearts
+                wait 1 second
+                set {cgriffe.%attacker%} to "on"
+
+command /Griffe:
+    trigger:
+        if player is op:
+            give player wooden sword named "&bGriffe"
