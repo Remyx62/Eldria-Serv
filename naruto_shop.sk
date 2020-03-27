@@ -543,9 +543,13 @@ on damage:
         if attacker is a player:
             if attacker has a diamond sword:
                 if name of tool of attacker is "&c&ko &cépée de la brume &ko":
-                    cancel event
-                    execute console command "/effect %victim% minecraft:blindness 10 5"
-                    damage the victim 1 hearts
+                    if {cdepeedelabrume.%attacker%} is "on":
+                        cancel event
+                        execute console command "/effect %victim% minecraft:blindness 10 5"
+                        damage the victim 1 hearts
+                        set {cdepeedelabrume.%attacker%} to "off"
+                        wait 10 seconds
+                        set {cdepeedelabrume.%attacker%} to "on"
 
 
 
