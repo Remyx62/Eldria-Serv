@@ -5,10 +5,11 @@ on rightclick on villager:
         open chest with 1 row named "<blue>Menu" to player
         wait 3 ticks
        
-        format slot 1 of player with arrow named "<cyan>kunai" with lore "<orange>Cliquez acheter des kunais" to run [execute player command "/menu kunai"]
-        format slot 2 of player with arrow named "<cyan>kunai v2" with lore "<orange>Cliquez pour acheter des kunais v2" to run [execute player command "/menu kunai2"]
-        format slot 3 of player with arrow named "<cyan>kunai v3" with lore "<orange>Cliquez pour acheter des kunais v3" to run [execute player command "/menu kunai3"]
-        
+        format slot 1 of player with arrow named "<cyan>kunai" to run [execute player command "/menu kunai"]
+        format slot 2 of player with arrow named "<cyan>kunai v2" to run [execute player command "/menu kunai2"]
+        format slot 3 of player with arrow named "<cyan>kunai v3" to run [execute player command "/menu kunai3"]
+        format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
+
 command /menu [<text>] [<text>]:
     trigger:
         if arg-1 is "kunai":
@@ -384,7 +385,130 @@ command /menu [<text>] [<text>]:
             if arg-2 is "confirme":
                 loop {nombredekunai3.%player%} times:
                     give arrow named "kunai v3" to player
-                    add -1 to {ryo.%player%}
+                    add -3 to {ryo.%player%}
+
+
+
+
+
+        if arg-1 is "kunaitp":
+            if arg-2 is not set:
+                set {nombredekunaitp.%player%} to 1
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "64":
+                set {nombredekunaitp.%player%} to 64
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "+10":
+                add 10 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "+1":
+                add 1 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "+100":
+                add 100 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "-10":
+                add -10 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "-1":
+                add -1 to {nombredekunaitp.%player%}
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "-100":
+                add -100 to {nombredekunaitp.%player%}
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "0":
+                set {nombredekunaitp.%player%} to 0
+                format slot 0 of player with locked chest:14 named "<red>0" to run [execute player command "/menu kunaitp 0"]
+                format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
+                format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
+                format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
+                format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
+                format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
+                format slot 8 of player with locked chest:5 named "<green>64" to run [execute player command "/menu kunaitp 64"]
+            if arg-2 is "confirme":
+                loop {nombredekunaitp.%player%} times:
+                    give arrow named "kunai v2" to player
+                    add -5 to {ryo.%player%}
             
 
 
