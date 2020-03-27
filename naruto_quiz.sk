@@ -1,0 +1,200 @@
+on rightclick on sign:
+    if line 2 is "Démarrer":
+        if line 3 is "le quiz":
+            teleport the player to {coorquiz1}
+
+on rightclick on villager:
+    if name of villager is "Question 1":
+        cancel event
+        set {quiz.%player%} to 1
+        set {vie.quiz.%player%} to 3
+        open chest with 2 rows named "&bQuestion 1" to player
+        wait 3 ticks
+        format slot 4 of player with locked chest:14 named "&cQuel est le nom du serveur ?" to be unstealable
+        format slot 11 of player with locked chest:0 named "Naruto" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Narudria" to run [execute player command "/perdu"]
+        format slot 15 of player with locked chest:0 named "Eldria" to run [execute player command "/pass 2"]
+
+    if name of villager is "Question 2":
+        cancel event
+        open chest with 2 rows named "&bQuestion 2" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:0 named "&cAs-tu déjà reagarder/lu Naruto ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "Oui" to run [send "Bravo ! Nous posons la question car au long de votre aventure il y aura quelques spoils mais à chaque fois signaler :)"]
+        format slot 13 of player with locked chest:0 named "Non" to run [send "Si tu comptes regarder Naruto, fais très attention car il y aura quelques spoils mais à chaque fois signaler :)"]
+        format slot 13 of player with locked chest:0 named "en cours" to run [send "fais très attention car il y aura quelques spoils mais à chaque fois signaler :)"]
+        wait 20 ticks
+        execute player command "/pass 3"
+
+    if name of villager is "Question 3":
+        cancel event
+        open chest with 2 rows named "&bQuestion 3" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cQuel est le nom de la monnaie dans Naruto ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "L'euro" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Le rio" to run [execute player command "/pass 4"]
+        format slot 15 of player with locked chest:0 named "Le Narutocoin" to run [execute player command "/perdu"]
+
+    if name of villager is "Question 4":
+        cancel event
+        open chest with 2 rows named "&bQuestion 4" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cQuel est la fonction d'un Hokage ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "C'est un villageois" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "C'est le chef du village" to run [execute player command "/perdu"]
+        format slot 15 of player with locked chest:0 named "C'est une personne bannie d'un village" to run [execute player command "/pass 5"]
+    
+    if name of villager is "Question 5":
+        cancel event
+        open chest with 2 rows named "Question 5" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cQuel est le village natale de Naruto ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "Konoah" to run [execute player command "/pass 6"]
+        format slot 13 of player with locked chest:0 named "Kumo" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Tokyo" to run [execute player command "/perdu"]
+
+    if name of villager is "Question 6":
+        cancel event
+        open chest with 2 rows named "&bQuestion 6" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cCombien de types de missions existent-ils ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "3 (Alpha, Béta, Charlie)" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "1 (un seul type)" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "5 (D,C,B,A,S)" to run [execute player command "/pass 7"]
+
+    if name of villager is "Question 7":
+        cancel event
+        open chest with 2 rows named "&bQuestion 7" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cCombien y a t-il de membres dans l'équipe 7 à sa formation ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "3" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "4" to run [execute player command "/pass 8"]
+        format slot 13 of player with locked chest:0 named "5" to run [execute player command "/perdu"]
+
+    if name of villager is "Question 8":
+        cancel event
+        open chest with 2 rows named "&bQuestion 8" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cQuel est la raison pour laquelle Sasuke est parti du village ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "Il a été banni du village" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Pour pouvoir avoir plus de force" to run [execute player command "/pass 9"]
+        format slot 13 of player with locked chest:0 named "Il n'est jamais parti" to run [execute player command "/perdu"]
+
+    if name of villager is "Question 9":
+        cancel event
+        open chest with 2 rows named "&bQuestion 9" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cDe quel clan est issue Naruto ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "Uchiha" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Haruno" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Uzumaki" to run [execute player command "/pass 10"]
+
+    if name of villager is "Question 10":
+        cancel event
+        open chest with 2 rows named "&bQuestion 10" to player
+        wait 3 ticks
+       
+        format slot 4 of player with locked chest:14 named "&cQuelle est la situation familiale de Naruto ?" to be unstealable
+
+        format slot 11 of player with locked chest:0 named "Il a perdu ses parents et est nul à l'école" to run [execute player command "/quifin"]
+        format slot 13 of player with locked chest:0 named "Il a perdu ses parents et est fort à l'école" to run [execute player command "/perdu"]
+        format slot 13 of player with locked chest:0 named "Il a une situation ordinaire" to run [execute player command "/perdu"]
+            
+command /perdu:
+    trigger:
+        if {quiz.%player%} is "1":
+            if {vie.qui.%player%} is "0":
+                send "Vous avez raté le quiz"
+
+            else:
+                add -1 to {vie.qui.%player%}
+                send "Vous vous ètes trompés. Il ne vous reste plus que %{vie.quiz.%player%}% vies"
+        else:
+            stop
+            
+commaNd /pass [<text>]:
+    trigger:
+        if {quiz.%player%} is "1":
+            if arg 1 is "2":
+                teleport the player to {coorquiz2}
+                send "&bBravo ! Vous avez réussi la question 1"
+
+            if arg 1 is "3":
+                teleport the player to {coorquiz3}
+                send "&bBravo ! Vous avez réussi la question 2"
+
+            if arg 1 is "4":
+                teleport the player to {coorquiz4}
+                send "&bBravo ! Vous avez réussi la question 3"
+
+            if arg 1 is "5":
+                teleport the player to {coorquiz5}
+                send "&bBravo ! Vous avez réussi la question 4"
+            
+            if arg 1 is "6":
+                teleport the player to {coorquiz6}
+                send "&bBravo ! Vous avez réussi la question 5"
+
+            if arg 1 is "7":
+                teleport the player to {coorquiz7}
+                send "&bBravo ! Vous avez réussi la question 6"
+
+            if arg 1 is "8":
+                teleport the player to {coorquiz8}
+                send "&bBravo ! Vous avez réussi la question 7"
+
+            if arg 1 is "9":
+                teleport the player to {coorquiz9} 
+                send "&bBravo ! Vous avez réussi la question 8"
+                
+            if arg 1 is "10":
+                teleport the player to {coorquiz10} 
+                send "&bBravo ! Vous avez réussi la question 9"
+
+command /quifin:
+    trigger:
+        if {quiz.%player%} is "1":
+            set {quiz.%player%} to "0"
+            send "Bravo tu as réussi le test, tu est maintenant aspirant ninja !"
+            teleport the player to {coorquizfin}
+            
+command /setquiz [<text>]:
+    trigger:
+        if arg 1 is "1":
+            set {coorquiz1} to player's location
+        if arg 1 is "2":
+            set {coorquiz2} to player's location
+        if arg 1 is "3":
+            set {coorquiz3} to player's location
+        if arg 1 is "4":
+            set {coorquiz4} to player's location
+        if arg 1 is "5":
+            set {coorquiz5} to player's location
+        if arg 1 is "6":
+            set {coorquiz6} to player's location
+        if arg 1 is "7":
+            set {coorquiz7} to player's location
+        if arg 1 is "8":
+            set {coorquiz8} to player's location
+        if arg 1 is "9":
+            set {coorquiz9} to player's location
+        if arg 1 is "10":
+            set {coorquiz10} to player's location
+        if arg 1 is "fin":
+            set {coorquizfin} to player's location
