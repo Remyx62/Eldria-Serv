@@ -2,18 +2,19 @@ on rightclick on villager:
     
     if name of villager is "Marchand d'armes":
         cancel event
-        open chest with 1 row named "<blue>Menu" to player
-        wait 3 ticks
-       
-        format slot 1 of player with arrow named "<cyan>kunai" with lore "<orange>1Ryo" to run [execute player command "/menu kunai"]
-        format slot 2 of player with arrow named "<cyan>kunai v2" with lore "<orange>2Ryos" to run [execute player command "/menu kunai2"]
-        format slot 3 of player with arrow named "<cyan>kunai v3" with lore "<orange>3Ryos" to run [execute player command "/menu kunai3"]
-        format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<orange>5Ryos||<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
-        format slot 5 of player with wooden sword named "<cyan>épée de la brume" with lore "<orange>50Ryos" to run [execute player command "/menu epeedelabrume"]
-        format slot 6 of player with wooden sword named "<cyan>Sameada" with lore "<orange>75Ryos" to run [execute player command "/menu Sameada"]
-        
+        execute player command "/menu"
 command /menu [<text>] [<text>]:
     trigger:
+        if arg-1 is not set:
+            open chest with 1 row named "<blue>Menu" to player
+            wait 3 ticks
+            format slot 1 of player with arrow named "<cyan>kunai" with lore "<orange>1Ryo" to run [execute player command "/menu kunai"]
+            format slot 2 of player with arrow named "<cyan>kunai v2" with lore "<orange>2Ryos" to run [execute player command "/menu kunai2"]
+            format slot 3 of player with arrow named "<cyan>kunai v3" with lore "<orange>3Ryos" to run [execute player command "/menu kunai3"]
+            format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<orange>5Ryos||<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
+            format slot 5 of player with wooden sword named "<cyan>épée de la brume" with lore "<orange>50Ryos" to run [execute player command "/menu epeedelabrume"]
+            format slot 6 of player with wooden sword named "<cyan>Sameada" with lore "<orange>75Ryos" to run [execute player command "/menu Sameada"]
+        
         if arg-1 is "kunai":
             if arg-2 is not set:
                 set {nombredekunai.%player%} to 1
