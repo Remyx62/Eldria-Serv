@@ -10,6 +10,8 @@ on rightclick on villager:
         format slot 3 of player with arrow named "<cyan>kunai v3" with lore "<orange>3Ryos" to run [execute player command "/menu kunai3"]
         format slot 4 of player with arrow named "<cyan>kunai tp" with lore "<orange>5Ryos||<red>Attention seulment les Namikazes" to run [execute player command "/menu kunaitp"]
         format slot 5 of player with wooden sword named "<cyan>épée de la brume" with lore "<orange>50Ryos" to run [execute player command "/menu epeedelabrume"]
+        format slot 6 of player with wooden sword named "<cyan>Sameada" with lore "<orange>75Ryos" to run [execute player command "/menu Sameada"]
+        
 command /menu [<text>] [<text>]:
     trigger:
         if arg-1 is "kunai":
@@ -21,7 +23,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -34,7 +36,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -47,7 +49,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -60,7 +62,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -73,7 +75,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -86,7 +88,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -99,7 +101,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -110,7 +112,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -123,7 +125,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai.%player%}%" to run [execute player command "/menu kunai confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai +100"]
@@ -154,7 +156,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -167,7 +169,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -180,7 +182,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -193,7 +195,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -206,7 +208,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -219,7 +221,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -232,7 +234,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -245,7 +247,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -258,7 +260,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai2 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai2 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai2 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai2.%player%}%" to run [execute player command "/menu kunai2 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai2 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai2 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai2 +100"]
@@ -283,7 +285,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -296,7 +298,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -309,7 +311,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -322,7 +324,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -335,7 +337,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -348,7 +350,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -361,7 +363,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -374,7 +376,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -387,7 +389,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunai3 -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunai3 -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunai3 -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunai3.%player%}%" to run [execute player command "/menu kunai3 confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunai3 +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunai3 +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunai3 +100"]
@@ -410,7 +412,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -423,7 +425,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -436,7 +438,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -449,7 +451,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -462,7 +464,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -475,7 +477,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -488,7 +490,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -501,7 +503,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -514,7 +516,7 @@ command /menu [<text>] [<text>]:
                 format slot 1 of player with locked chest:14 named "<red>-100" to run [execute player command "/menu kunaitp -100"]
                 format slot 2 of player with locked chest:14 named "<red>-10" to run [execute player command "/menu kunaitp -10"]
                 format slot 3 of player with locked chest:14 named "<red>-1" to run [execute player command "/menu kunaitp -1"]
-                format slot 4 of player with locked chest:15 named "<white>confirmer:%{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
+                format slot 4 of player with locked chest:15 named "<white>confirmer: %{nombredekunaitp.%player%}%" to run [execute player command "/menu kunaitp confirme"]
                 format slot 5 of player with locked chest:5 named "<green>+1" to run [execute player command "/menu kunaitp +1"]
                 format slot 6 of player with locked chest:5 named "<green>+10" to run [execute player command "/menu kunaitp +10"]
                 format slot 7 of player with locked chest:5 named "<green>+100" to run [execute player command "/menu kunaitp +100"]
@@ -524,20 +526,41 @@ command /menu [<text>] [<text>]:
                     give arrow named "kunai v2" to player
                     add -5 to {ryo.%player%}
         if arg-1 is "epeedelabrume":
-            if arg-2 is set:
+            if arg-2 is not set:
                 open chest with 1 row named "<blue>Menu" to player
                 wait 3 ticks
                 format slot 0 of player with glass pane named "<black>." to be unstealable
                 format slot 1 of player with glass pane named "<black>." to be unstealable
                 format slot 2 of player with glass pane named "<black>." to be unstealable
-                format slot 3 of player with locked chest:14 named "<red>annuler" to run [execute player command "/menu kunaitp cancel"]
+                format slot 3 of player with locked chest:14 named "<red>annuler" to run [execute player command "/menu epeedelabrume cancel"]
                 format slot 4 of player with locked chest:15 named "<white>Confirmer?" to be unstealable
-                format slot 5 of player with locked chest:5 named "<green>confirmer" to run [execute player command "/menu kunaitp confirme"]
+                format slot 5 of player with locked chest:5 named "<green>confirmer" to run [execute player command "/menu epeedelabrume confirme"]
                 format slot 6 of player with glass pane named "<black>." to be unstealable
                 format slot 7 of player with glass pane named "<black>." to be unstealable
                 format slot 8 of player with glass pane named "<black>." to be unstealable
             if arg-2 is "confirme":
                 give diamond sword of unbreaking 1 named "&c&ko &cépée de la brume &ko" to player
+                add -50 to {ryo.%player%}
+            if arg-2 is "cancel":
+                wait 1 tick
+        if arg-1 is "Sameada":
+            if arg-2 is not set:
+                open chest with 1 row named "<blue>Menu" to player
+                wait 3 ticks
+                format slot 0 of player with glass pane named "<black>." to be unstealable
+                format slot 1 of player with glass pane named "<black>." to be unstealable
+                format slot 2 of player with glass pane named "<black>." to be unstealable
+                format slot 3 of player with locked chest:14 named "<red>annuler" to run [execute player command "/menu Sameada cancel"]
+                format slot 4 of player with locked chest:15 named "<white>Confirmer?" to be unstealable
+                format slot 5 of player with locked chest:5 named "<green>confirmer" to run [execute player command "/menu Sameada confirme"]
+                format slot 6 of player with glass pane named "<black>." to be unstealable
+                format slot 7 of player with glass pane named "<black>." to be unstealable
+                format slot 8 of player with glass pane named "<black>." to be unstealable
+            if arg-2 is "confirme":
+                give diamond sword of unbreaking 1 named "&c&ko &cSameada &ko" to player
+                add -75 to {ryo.%player%}
+            if arg-2 is "cancel":
+                wait 1 tick
 on damage:
     if victim is a player:
         if attacker is a player:
@@ -546,10 +569,20 @@ on damage:
                     if {cdepeedelabrume.%attacker%} is "on":
                         cancel event
                         execute console command "/effect %victim% minecraft:blindness 10 5"
-                        damage the victim 1 hearts
+                        damage victim by 1 hearts
                         set {cdepeedelabrume.%attacker%} to "off"
                         wait 10 seconds
                         set {cdepeedelabrume.%attacker%} to "on"
+                if name of tool of attacker is "&c&ko &cSameada &ko":
+                    if {cdSameada.%attacker%} is "on":
+                        cancel event
+                        set {cdSameada.%attacker%} to "off"
+                        loop 10 times:
+                            wait 1 seconds
+                            add -1 to {chakra.%uuid of victim%}
+                            add 0.5 to {chakra.%uuid of attacker%}
+                        wait 10 seconds
+                        set {cdSameada.%attacker%} to "on"
 
 
 
